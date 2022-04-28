@@ -23,7 +23,7 @@ struct ContentView: View {
     @State private var showingFilterSheet = false
     
     let context = CIContext()
-
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -84,6 +84,7 @@ struct ContentView: View {
             .onChange(of: inputImage) { _ in loadImage() }
         }
     }
+    
     func save(){
         guard let processedImage = processedImage else { return }
         
